@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowCommerce – High-Converting Shopify Store Build & Optimization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wapper">
+                <div class="cta desktop-cta">
+                    <a href="login.html" class="btn outline">Login</a>
+                    <!-- <a href="#" class="btn solid">Book Demo</a> -->
+                </div>
+                <!-- Logo -->
+                <div class="logo"><a href="/"><img src="images/logo.png" alt=""></a></div>
+                <div class="menu-toggle" id="menuToggle">
+                    ☰
+                </div>
+                <!-- Menu -->
+                <nav class="nav" id="navMenu">
+                    <a href="/">Home</a>
+                    <a href="/#feature">Features</a>
+                    <a href="/#case-study">Case Study</a>
+                    <a href="/#process">Process</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="mobile-cta">
+                        <a href="login.html" class="btn outline">Login</a>
+                        <!-- <a href="#" class="btn solid">Book Demo</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="contact">
+
+        <!-- Heading -->
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Let’s connect.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="contact-container">
+
+            <!-- Left: Form -->
+            <div class="contact-form">
+
+                <h3>Send a Message</h3>
+
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" id="contactPhone" maxlength="10" placeholder="Phone Number" required>
+                    <p class="error-msg" style="display:none;color:red;">Invalid phone number</p>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+
+                    <button type="submit">🚀 Send Message</button>
+                    <div class="success-msg contact-success">✅ Thank you for contacting us. We will get back to you
+                        shortly.</div>
+                </form>
+
+            </div>
+
+            <!-- Right: Info -->
+            <div class="contact-info">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>hello@glowcommerce.io</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Location</h4>
+                    <p>86-90 Paul Street, Shoreditch
+                        London EC2A 4NE
+                        United Kingdom</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container footer-wrapper">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <h2 class="logo">GlowCommerce</h2>
+                <p>High-converting Shopify design & optimization experts</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#feature">Features</a></li>
+                    <li><a href="/#case-study">Case Study</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="/#process">Process</a></li>
+                    <!-- <li><a href="#">Terms of Service</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>hello@glowcommerce.io</p>
+                <p style="margin-top: 10px;">86-90 Paul Street, Shoreditch
+                    London EC2A 4NE
+                    United Kingdom</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2026 GlowCommerce. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("contactPhone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    </script>
+</body>
+
+</html>

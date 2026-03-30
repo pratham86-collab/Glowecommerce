@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .input-box {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 63%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="auth">
+
+        <div class="auth-box">
+            <div class="logo"><a href="/"><img src="images/logo.png" alt=""></a></div>
+            <!-- Toggle -->
+            <div class="auth-toggle">
+                <button class="toggle-btn active" data-form="login">Login</button>
+                <button class="toggle-btn" data-form="signup">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <h2>Welcome Back</h2>
+
+                <input type="email" placeholder="Email Address" required>
+                <div class="input-box" style="position: relative;">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+
+                <button type="submit">🔐 Login</button>
+                <p class="error-msg">❌ Invalid credentials</p>
+                <div class="success-msg">✅ Login success!</div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+                <h2>Create Account</h2>
+
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" id="signupPhone" maxlength="10" placeholder="Phone Number" required>
+                <div class="input-box" style="position: relative;">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+
+                <button type="submit">🚀 Sign Up</button>
+                <div class="success-msg signup-success">✅ Successfully submitted!</div>
+            </form>
+
+            <!-- Success -->
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("signupPhone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+        
+    </script>
+</body>
+
+</html>
